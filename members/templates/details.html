@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello World</h1>
-    <p>welcome to my first django project </p>
+    <h1>{{mymembers.firstname}} {{mymembers.lastname}}</h1>
+    <p>phone: {{mymembers.phone}} </p>
+    <p>member since {{mymembers.joined_date}}</p>
+    <p>back to <a href="/members"></a>Members</p>
 </body>
 </html>
