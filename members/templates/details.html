@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>{{mymembers.firstname}} {{mymembers.lastname}}</h1>
-    <p>phone: {{mymembers.phone}} </p>
-    <p>member since {{mymembers.joined_date}}</p>
-    <p>back to <a href="/members"></a>Members</p>
-</body>
-</html>
+{%extends "master.html"%}
+{%block title%}
+details about {{mymember.firstname}} {{mymember.lastname}}
+{%endblock%}
+
+{%block content%}
+<h1>{{mymember.firstname}}{{mymember.lastname}}</h1>
+<p>phone{{mymember.phone}}</p>
+<p>joined since {{mymember.joined_date}}</p>
+<p>back to <a href="/members">Members</a></p>
+{%endblock%}
