@@ -13,4 +13,13 @@ def members(request):
     return HttpResponse(template.render(context,request))
 
 
-
+def details(request):
+    mymember = Member.objects.get(id = id)
+    template = loader.get_template('details.html')
+    context = {
+        'mymember':mymember
+    }
+    return HttpResponse(template.render(request,context))
+def main(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())
